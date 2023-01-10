@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    <form action="/api" method="post" style="text-align: center;">
+        <h1>Create account</h1>
+        <input id="1" type="text" name="user">
+        <input id="2" type="text" name="password">
+        <button type="sumbit">Submit</button>
+    </form>
+    <script>
+        const user = document.getElementById("1");
+        const password = document.getElementById("2");
+        form.addEventListener('submit', function(e){
+            e.preventDefault();
+            console.log([...data])
+        fetch("/api",{
+            method:"POST",
+            body: JSON.stringify(data),
+        })
+        .then(res => res.json())
+        .then(data => console.log(data))
+        .then(err => console.log(err))
+    })
+
+    </script>
+    <br>
+    <form action="/login" method="post" style="text-align: center;">
+        <h1>login</h1>
+        <input id="3" type="text" name="user1">
+        <input id="4" type="text" name="password1">
+        <button type="sumbit">Submit</button>
+    </form>
+    <script>
+        const user1 = document.getElementById("3");
+        const password1 = document.getElementById("4");
+        form.addEventListener('submit', function(e){
+            e.preventDefault();
+            console.log([...data])
+        fetch("/login",{
+            method:"POST",
+            body: JSON.stringify(data),
+        })
+        .then(res => res.json())
+        .then(data => console.log(data))
+        .then(err => console.log(err))
+    })
+
+    </script>
+</body>
+</html>
